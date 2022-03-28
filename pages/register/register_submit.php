@@ -1,6 +1,6 @@
 <?php
     session_start();
-    $file_path = $_SERVER["document_root"];
+    $file_path = $_SERVER["DOCUMENT_ROOT"];
     include "$file_path/php/dbh.php";
     $username = $conn -> real_escape_string($_POST["username"]);
     $table_name = "users";
@@ -16,6 +16,7 @@
         $sql = "INSERT INTO users (user) VALUES ($username);";
         mysqli_query ($conn, $sql);
         $_SESSION["username"] = $username;
+        unset($_SESSION["error_message"];
         header ("location: /pages/game.php");
     }
 ?>
