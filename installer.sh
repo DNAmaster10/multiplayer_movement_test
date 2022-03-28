@@ -1,4 +1,4 @@
-while [true]
+while [1==1]
 do
   sudo mkdir /var/www/temp
   cd /var/www/temp
