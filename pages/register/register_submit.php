@@ -15,6 +15,8 @@
     else {
         $sql = "INSERT INTO users (user) VALUES ($username);";
         mysqli_query ($conn, $sql);
+        $time = time();
+        $sql = "INSERT INTO player_positions (player,last_update) VALUES ($username)";
         $_SESSION["username"] = $username;
         unset($_SESSION["error_message"]);
         header ("location: /pages/game.php");
