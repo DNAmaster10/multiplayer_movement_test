@@ -16,7 +16,7 @@
         $sql = "INSERT INTO users (user) VALUES ($username);";
         mysqli_query ($conn, $sql);
         $_SESSION["username"] = $username;
-        unset($_SESSION["error_message"];
+        unset($_SESSION["error_message"]);
         header ("location: /pages/game.php");
     }
 ?>
