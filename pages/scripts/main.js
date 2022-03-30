@@ -1,15 +1,15 @@
 var c = document.getElementById("mian_game_canvas");
 var ctx = c.getContext("2d);
 $.ajax({
-        url: './send_message_handle.php',
-        type: "POST",
-        data: {message:input_message},
+        url: './get_positions.php',
+        type: "GET",
         success: function(data) {
-            console.log(data);
-            slideIn();
+
         }
 });
 function draw() {
-
+    ctx.beginPath();
+    ctx.rect();
 }
 setInterval(draw, 10);
+//ctx.clearRect(0,0,canvas.width,canvas.height);
