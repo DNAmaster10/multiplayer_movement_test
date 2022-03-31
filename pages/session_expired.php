@@ -6,7 +6,7 @@
     </head>
     <body>
         <p>Your login session has expired</p>
-        <form action="index.php">
+        <form action="/index.php">
             <input type="submit" value="Home">
         </form>
     </body>
