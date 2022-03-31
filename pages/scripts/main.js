@@ -1,5 +1,4 @@
 var c = document.getElementById("mian_game_canvas");
-var ctx = c.getContext("2d");
 var ctx = c.getContext("webgl");
 $.ajax({
         url: './get_positions.php',
