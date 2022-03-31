@@ -70,6 +70,5 @@ function main_game_loop() {
         }
     send_player();
     ctx.stroke();
-    console.log(get_loop);
 }
 setInterval(main_game_loop, 10);
