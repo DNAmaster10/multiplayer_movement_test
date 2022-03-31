@@ -11,6 +11,6 @@
     $where_value = $_SESSION["username"];
     include $file_path."/php/get_single.php";
     if ($result == "null") {
-        header ("location: /pages/session_expired");
+        header ("location: /pages/session_expired.php");
     }
 ?>
