@@ -2,7 +2,7 @@ var c = document.getElementById("main_game_canvas");
 var ctx = c.getContext("2d");
 var player_x = 10;
 var player_y = 10;
-var total_positions = 0;
+var total_positions = 4;
 var positions_array = [0,0];
 $.ajax({
         url: './get_positions.php',
