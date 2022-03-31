@@ -3,7 +3,7 @@
 		if (!isset($file_path)) {
 			$file_path = $_SERVER["DOCUMENT_ROOT"];
 		}
-		include "file_path/php/dbh.php";
+		include "$file_path/php/dbh.php";
 	}
 	$sql = "SELECT ".$column_name." FROM ".$table_name." WHERE (".$where_column.") = ('".$where_value."');";
 	$raw_result = mysqli_query($conn, $sql) or die (mysqli_error($conn));
