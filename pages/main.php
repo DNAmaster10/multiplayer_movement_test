@@ -1,7 +1,7 @@
 <?php
     session_start();
     $file_path = $_SERVER["DOCUMENT_ROOT"];
-    include "$file_path/php/check_login.php";
+    //include "$file_path/php/check_login.php";
 ?>
 <!DOCTYPE html>
 <html>
