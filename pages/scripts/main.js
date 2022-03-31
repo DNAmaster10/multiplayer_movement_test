@@ -54,7 +54,8 @@ function send_player() {
 function main_game_loop() {
     ctx.clearRect(0,0,c.width,c.height);
     move_player();
-    get_positions();
+    get_loop = get_loop + 1;
+    if (get_loop == 10) {get_positions();
     for (let i = 0; i < total_positions; i++) {
         var temp_array = positions_array[i];
         current_position_array = temp_array.split(",");
@@ -63,7 +64,8 @@ function main_game_loop() {
         ctx.rect(current_position_array[0],current_position_array[1],10,10);
         ctx.stroke();
     }
+    }
     send_player();
     ctx.stroke();
 }
-setInterval(main_game_loop, 20);
+setInterval(main_game_loop, 10);
