@@ -12,4 +12,7 @@
             echo ($row["player_x"].",".$row["player_y"].".");
         }
     }
+    else {
+        echo ("404");
+    }
 ?>

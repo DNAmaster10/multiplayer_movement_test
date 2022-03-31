@@ -14,6 +14,7 @@ function get_positions() {
         url: './get_positions.php',
         type: "GET",
         success: function(data) {
+            console.log(data);
             var positions_array = data.split(".");
             var total_positions = positions_array.length;
         }
