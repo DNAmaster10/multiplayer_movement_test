@@ -16,6 +16,7 @@ function get_positions() {
         success: function(data) {
             console.log(data);
             var positions_array = data.split(".");
+            console.log(positions_array.toString());
             var total_positions = positions_array.length;
         }
     });
