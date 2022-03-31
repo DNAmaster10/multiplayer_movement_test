@@ -17,6 +17,7 @@ function get_positions() {
             console.log(data);
             var positions_array = data.split(".");
             console.log(positions_array.toString());
+            console.log("The length of the array is: " + positions_array.length;
             var total_positions = positions_array.length;
         }
     });
