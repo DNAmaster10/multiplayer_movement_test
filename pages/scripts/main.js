@@ -23,16 +23,16 @@ function get_positions() {
 }
 document.addEventListener("keydown", (event) => {
     if(event.key === "w") {
-        player_y = player_y - 10;
+        player_y = player_y - 1;
     }
     else if(event.key === "a") {
-        player_x = player_x - 10;
+        player_x = player_x - 1;
     }
     else if(event.key === "s") {
-        player_y = player_y + 10;
+        player_y = player_y + 1;
     }
     else if(event.key === "d") {
-        player_x = player_x + 10;
+        player_x = player_x + 1;
     }
 })
 function move_down() {
