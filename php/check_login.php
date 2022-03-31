@@ -6,8 +6,8 @@
         $file_path = $_SERVER["DOCUMMENT_ROOT"];
     }
     $table_name = "users";
-    $column_name = "username";
-    $where_column = "username";
+    $column_name = "user";
+    $where_column = "user";
     $where_value = $_SESSION["username"];
     include $file_path."/php/get_single.php";
     if ($result == "null") {
