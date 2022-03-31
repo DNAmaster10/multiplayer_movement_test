@@ -55,7 +55,8 @@ function main_game_loop() {
     get_positions();
     //ctx.clearRect(0,0,c.width,c.height);
     for (let i = 0; i < total_positions; i++) {
-        current_position_array = positions_array[i].split(",");
+        var temp_array = positions_array[i];
+        current_position_array = temp_array.split(",");
         ctx.beginPath();
         ctx.lineWidth = "4";
         ctx.rect(current_position_array[0],current_position_array[1],10,10);
