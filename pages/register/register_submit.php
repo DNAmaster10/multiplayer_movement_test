@@ -7,7 +7,7 @@
     $column_name = "user";
     $where_column = "user";
     $where_value = $username;
-    include "$file_path/get_single.php";
+    include "$file_path/php/get_single.php";
     if (!$result == "null") {
         $_SESSION["error_message"] = "That account already exists!";
         header ("location: ./register.php");
