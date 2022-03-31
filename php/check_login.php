@@ -1,7 +1,5 @@
 <?php
-    if (session_status() === PHP_SESSION_NONE) {
-        session_start();
-    }
+    session_start();
     if (!isset($file_path)) {
         $file_path = $_SERVER["DOCUMMENT_ROOT"];
     }
