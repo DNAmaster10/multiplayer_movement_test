@@ -61,6 +61,7 @@ function main_game_loop() {
         ctx.beginPath();
         ctx.lineWidth = "4";
         ctx.rect(current_position_array[0],current_position_array[1],10,10);
+        ctx.stroke();
     }
     send_player();
     ctx.stroke();
