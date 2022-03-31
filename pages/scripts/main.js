@@ -2,6 +2,7 @@ var c = document.getElementById("main_game_canvas");
 var ctx = c.getContext("2d");
 var player_x = 10;
 var player_y = 10;
+var total_positions = 0;
 $.ajax({
         url: './get_positions.php',
         type: "GET",
@@ -18,7 +19,7 @@ function get_positions() {
             var positions_array = data.split(".");
             console.log(positions_array.toString());
             console.log("The length of the array is: " + positions_array.length);
-            var total_positions = positions_array.length;
+            total_positions = positions_array.length;
         }
     });
 }
