@@ -16,7 +16,7 @@
         $sql = "INSERT INTO users (user) VALUES ($username);";
         mysqli_query ($conn, $sql);
         $time = time();
-        $sql = "INSERT INTO player_positions (player,last_update) VALUES ($username)";
+        $sql = "INSERT INTO player_positions (player,last_update) VALUES ($username,$time)";
         $_SESSION["username"] = $username;
         unset($_SESSION["error_message"]);
         header ("location: /pages/main.php");
