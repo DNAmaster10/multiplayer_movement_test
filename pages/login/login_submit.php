@@ -15,7 +15,7 @@
     else {
         $_SESSION["username"] = $username;
         $time = time();
-        $sql = "UPDATE TABLE player_positions SET last_update=$time");
+        $sql = "UPDATE TABLE player_positions SET last_update='$time'";
         mysqli_query ($conn, $sql);
         header ("location: /pages/main.php");
     }
