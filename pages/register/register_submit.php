@@ -17,6 +17,7 @@
         mysqli_query ($conn, $sql) or die (mysqli_error($conn));
         $time = time();
         $sql = "INSERT INTO player_positions (player,last_update) VALUES ('$username','$time')";
+        mysqli_query ($conn, $sql);
         $_SESSION["username"] = $username;
         unset($_SESSION["error_message"]);
         header ("location: /pages/main.php");
