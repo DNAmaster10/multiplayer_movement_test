@@ -4,7 +4,8 @@
     include "$file_path/php/dbh.php";
     $time = time();
     $new_time = time - 100;
-    $sql = "SELECT player_x,player_y FROM player_positions WHERE player!='$_SESSION["username"]' AND last_update>$new_time";
+    $username = $_SESSION["username"];
+    $sql = "SELECT player_x,player_y FROM player_positions WHERE player!='$username' AND last_update>$new_time";
     $raw result = mysqli_query($conn, $sql);
     if ($raw_resut -> num_rows > 0 {
         while ($row = mysqli_fetch_array($raw_result)) {
