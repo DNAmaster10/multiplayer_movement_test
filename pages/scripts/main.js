@@ -36,10 +36,6 @@ function move_player() {
     ctx.lineWidth = "4";
     ctx.rect(player_x, player_y, 10, 10);
 }
-}
-function draw_player() {
-
-}
 function send_player() {
     $.ajax({
         url: './get_positions.php',
