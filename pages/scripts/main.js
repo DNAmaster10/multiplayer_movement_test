@@ -24,17 +24,17 @@ function get_positions() {
         }
     });
 }
-document.addEventListener("keydown", function(e) {
-    if(e.key === "w") {
+document.addEventListener("keydown", (event) => {
+    if(event.key === "w") {
         player_y = player_y - 10;
     }
-    else if(e.key === "a") {
+    else if(event.key === "a") {
         player_x = player_x - 10;
     }
-    else if(e.key === "s") {
+    else if(event.key === "s") {
         player_y = player_y + 10;
     }
-    else if(e.key === "d") {
+    else if(event.key === "d") {
         player_x = player_x + 10;
     }
 })
@@ -42,6 +42,7 @@ function move_player() {
     ctx.beginPath();
     ctx.lineWidth = "4";
     ctx.rect(player_x, player_y, 10, 10);
+    ctx.stroke();
 }
 function send_player() {
     $.ajax({
