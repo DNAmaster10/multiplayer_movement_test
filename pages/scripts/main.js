@@ -4,6 +4,7 @@ var player_x = 10;
 var player_y = 10;
 var total_positions = 4;
 var positions_array = [0,0];
+var get_loop = 0;
 $.ajax({
         url: './get_positions.php',
         type: "GET",
@@ -63,6 +64,7 @@ function main_game_loop() {
         ctx.lineWidth = "4";
         ctx.rect(current_position_array[0],current_position_array[1],10,10);
         ctx.stroke();
+        get_loop = 0;
     }
     }
     send_player();
