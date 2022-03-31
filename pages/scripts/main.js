@@ -52,9 +52,9 @@ function send_player() {
     });
 }
 function main_game_loop() {
+    ctx.clearRect(0,0,c.width,c.height);
     move_player();
     get_positions();
-    ctx.clearRect(0,0,c.width,c.height);
     for (let i = 0; i < total_positions; i++) {
         var temp_array = positions_array[i];
         current_position_array = temp_array.split(",");
