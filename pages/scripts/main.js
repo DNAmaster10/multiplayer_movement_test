@@ -1,4 +1,4 @@
-var c = document.getElementById("mian_game_canvas");
+var c = document.getElementById("main_game_canvas");
 var ctx = c.getContext("2d");
 $.ajax({
         url: './get_positions.php',
