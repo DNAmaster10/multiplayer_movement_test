@@ -48,7 +48,7 @@ function send_player() {
 function main_game_loop() {
     move_player();
     get_positions();
-    ctx.clearRect(0,0,canvas.width,canvas.height);
+    ctx.clearRect(0,0,c.width,c.height);
     for (let i = 0; i < total_positions; i++) {
         current_position_array = positions_array[i].split(",");
         ctx.beginPath();
