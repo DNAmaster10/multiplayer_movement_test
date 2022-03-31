@@ -3,6 +3,7 @@ var ctx = c.getContext("2d");
 var player_x = 10;
 var player_y = 10;
 var total_positions = 0;
+var positions_array = [0,0];
 $.ajax({
         url: './get_positions.php',
         type: "GET",
@@ -16,7 +17,7 @@ function get_positions() {
         type: "GET",
         success: function(data) {
             console.log(data);
-            var positions_array = data.split(".");
+            positions_array = data.split(".");
             console.log(positions_array.toString());
             console.log("The length of the array is: " + positions_array.length);
             total_positions = positions_array.length;
