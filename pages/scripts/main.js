@@ -35,6 +35,9 @@ document.addEventListener("keydown", (event) => {
         player_x = player_x + 10;
     }
 })
+function move_down() {
+    player_y = player_y - 10;
+}
 function move_player() {
     ctx.beginPath();
     ctx.lineWidth = "4";
