@@ -5,7 +5,7 @@
     $time = time();
     $new_time = $time - 10;
     $username = $_SESSION["username"];
-    $sql = "SELECT player_x,player_y FROM player_positions WHERE player!='".$username."' AND time>".$new_time."";
+    $sql = "SELECT player_x,player_y FROM player_positions WHERE player!='".$username."' AND time>'".$new_time."'";
     $raw_result = mysqli_query($conn, $sql) or die (mysqli_error($conn));
     if ($raw_result -> num_rows > 0) {
         while ($row = mysqli_fetch_array($raw_result)) {
