@@ -1,6 +1,6 @@
 <?php
     session_start();
-    include $_SERVER["DOCUMEENT_ROOT"]."/php/dbh.php";
+    include $_SERVER["DOCUMENT_ROOT"]."/php/dbh.php";
     $player_y = $conn -> real_escape_string($_GET["player_y"]);
     $player_x = $conn -> real_escape_string($_GET["player_x"]);
     $time = time();
