@@ -16,10 +16,7 @@ function get_positions() {
         url: './get_positions.php',
         type: "GET",
         success: function(data) {
-            console.log(data);
             positions_array = data.split(".");
-            console.log(positions_array.toString());
-            console.log("The length of the array is: " + positions_array.length);
             total_positions = positions_array.length;
         }
     });
@@ -54,11 +51,10 @@ function send_player() {
 function main_game_loop() {
     move_player();
     get_positions();
-    //ctx.clearRect(0,0,c.width,c.height);
+    ctx.clearRect(0,0,c.width,c.height);
     for (let i = 0; i < total_positions; i++) {
         var temp_array = positions_array[i];
         current_position_array = temp_array.split(",");
-        console.log("x" + current_position_array[0] + "y" + current_position_array[1]);
         ctx.beginPath();
         ctx.lineWidth = "4";
         ctx.rect(current_position_array[0],current_position_array[1],10,10);
@@ -67,4 +63,4 @@ function main_game_loop() {
     send_player();
     ctx.stroke();
 }
-setInterval(main_game_loop, 2000);
+setInterval(main_game_loop, 20);
