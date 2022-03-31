@@ -2,6 +2,9 @@
     session_start();
     $file_path = $_SERVER["DOCUMENT_ROOT"];
     include "$file_path/php/dbh.php";
+    if ($conn->connect_error) {
+    die("La connexion a échoué : " . $conn->connect_error);
+}
     $time = time();
     $new_time = $time - 10000;
     $username = $_SESSION["username"];
