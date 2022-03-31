@@ -1,6 +1,6 @@
 <?php
     session_start();
-    include "$_SERVER["DOCUMENTT_ROOT"]/php/dbh.php";
+    include "$_SERVER["DOCUMENT_ROOT"]/php/dbh.php";
     $time = time();
     $new_time = time - 100;
     $sql = "SELECT player_x,player_y FROM player_positions WHERE online=1 AND player!=$_SESSION["username"] AND last_update>$new_time";
