@@ -58,6 +58,7 @@ function main_game_loop() {
     get_loop = get_loop + 1;
     if (get_loop == 10) {
         get_positions();
+        send_player();
         get_loop = 0;
     }
     for (let i = 0; i < total_positions; i++) {
@@ -68,7 +69,6 @@ function main_game_loop() {
         ctx.rect(current_position_array[0],current_position_array[1],10,10);
         ctx.stroke();
         }
-    send_player();
     ctx.stroke();
 }
 setInterval(main_game_loop, 10);
