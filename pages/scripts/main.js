@@ -1,5 +1,7 @@
 var c = document.getElementById("main_game_canvas");
 var ctx = c.getContext("2d");
+var player_x = 10;
+var player_y = 10;
 $.ajax({
         url: './get_positions.php',
         type: "GET",
