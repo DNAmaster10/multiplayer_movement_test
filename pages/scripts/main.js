@@ -40,7 +40,7 @@ function send_player() {
     $.ajax({
         url: './get_positions.php',
         type: "GET",
-        data: {player_x:player_x, player_y:player_y}.
+        data: {player_x:player_x, player_y:player_y}
     });
 }
 function main_game_loop() {
