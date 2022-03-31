@@ -66,4 +66,4 @@ function main_game_loop() {
     send_player();
     ctx.stroke();
 }
-setInterval(main_game_loop, 10);
+setInterval(main_game_loop, 20);
