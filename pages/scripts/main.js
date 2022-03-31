@@ -46,7 +46,7 @@ function move_player() {
 }
 function send_player() {
     $.ajax({
-        url: './get_positions.php',
+        url: './send_positions.php',
         type: "GET",
         data: {player_x:player_x, player_y:player_y}
     });
