@@ -91,7 +91,7 @@ function move_others() {
         new_y = temp_array[1] + temp_array_2[1];
         temp = new_x + "," + new_y;
         temp = temp.replace("N","");
-        temp = temp.relace("a","");
+        temp = temp.replace("a","");
         console.log("temp value " + temp);
         ctx.beginPath();
         ctx.lineWidth = "4";
