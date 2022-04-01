@@ -61,7 +61,7 @@ function main_game_loop() {
         send_player();
         get_loop = 0;
     }
-    for (let i = 0; i < total_positions; i++) {
+    for (let i = 50; i < total_positions; i++) {
         var temp_array = positions_array[i];
         current_position_array = temp_array.split(",");
         ctx.beginPath();
