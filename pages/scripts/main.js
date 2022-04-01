@@ -73,9 +73,9 @@ function interpolate_calculate() {
         dx = (temp_array_2[0] - temp_array[0]);
         dy = (temp_array_2[1] - temp_array[1]);
         dx_per = (dx / get_delay);
-        dx_per = math.round(dx_per);
+        dx_per = Math.round(dx_per);
         dy_per = (dy / get_delay);
-        dy_per = math.round(dy_per);
+        dy_per = Math.round(dy_per);
         console.log("dx = " + dx);
         console.log("dy = " + dy);
         temp = dx + "," + dy;
