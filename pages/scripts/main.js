@@ -74,8 +74,8 @@ function interpolate_calculate() {
         var this_old_y = parseInt(this_old_pos_array[1]);
         var this_new_x = parseInt(this_new_pos_array[0]);
         var this_new_y = parseInt(this_new_pos_array[1]);
-        var change_in_x = (this_new_x - this_old_x) * -1;
-        var change_in_y = (this_new_y - this_old_y) * -1;
+        var change_in_x = (this_new_x - this_old_x);
+        var change_in_y = (this_new_y - this_old_y);
         var change_in_x_chane_in_y = String(change_in_x) + "," + String(change_in_y);
         interpolation_ammount.push(change_in_x_chane_in_y);
         console.log(interpolation_ammount);
