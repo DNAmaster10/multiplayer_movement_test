@@ -19,6 +19,7 @@ var temp = "null";
 var old_positions_array = [];
 var new_x = 0;
 var new_y = 0;
+var interpolation_ammount = [0,0]
 $.ajax({
         url: './get_positions.php',
         type: "GET",
@@ -66,7 +67,7 @@ function get_positions() {
     });
 }
 function interpolate_calculate() {
-    var interpolation_ammount = [];
+    interpolation_ammount = [];
     for (let i = 0; i < total_positions -1; i++) {
         var this_old_pos_array = old_positions_array[i].split(",");
         var this_new_pos_array = positions_array[i].split(",");
@@ -87,7 +88,7 @@ function interpolate_calculate() {
 }
 function move_others() {
     for (let i = 0; i < total_positions - 1; i++) {
-        var this_interpolation_ammount = interpolation_ammount[0].split(",");
+        var this_interpolation_ammount = interpolation_ammount[i].split(",");
         var this_interpolation_x = parseInt(this_interpolation_ammount[0]);
         var this_interpolation_y = parseInt(this_interpolation_ammount[1]);
         var this_pos = positions_array[i].split(",");
