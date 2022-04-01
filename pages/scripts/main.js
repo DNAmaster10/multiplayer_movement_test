@@ -82,8 +82,8 @@ function interpolate_calculate() {
         average_change_in_y = Math.round(average_change_in_y);
         var change_in_x_change_in_y_average = String(average_change_in_x) + "," + String(average_change_in_y);
         interpolation_ammount.push(change_in_x_change_in_y_average);
-        console.log(interpolation_ammount);
     }
+    console.log(interpolation_ammount);
 }
 function move_others() {
     for (let i = 0; i < total_positions - 1; i++) {
