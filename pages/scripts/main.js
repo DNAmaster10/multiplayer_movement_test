@@ -71,6 +71,7 @@ function interpolate_calculate() {
         transtion_y = (temp_array_2[1] - temp_array[1]) / get_delay;
         temp = transition_x.toString() + "," + transition_y.toString();
         interpolate_array.push(temp);
+        console.log(interpolate_array);
     }
 }
 function move_others() {
