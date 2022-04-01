@@ -73,6 +73,8 @@ function interpolate_calculate() {
         temp_array_2 = positions_array[i].split(",");
         dx = (temp_array_2[0] - temp_array[0]);
         dy = (temp_array_2[1] - temp_array[1]);
+        console.log("dx = " + dx);
+        console.log("dy = " + dy);
         temp = dy + "," + dx;
         interpolate_array.push(temp);
         console.log("Interpolate array: " + interpolate_array);
@@ -92,6 +94,7 @@ function move_others() {
         ctx.stroke();
         current_interpolate_positions_array[i] = temp;
     }
+    current_interpolate_position = [];
 }
 function main_game_loop() {
     ctx.clearRect(0,0,c.width,c.height);
