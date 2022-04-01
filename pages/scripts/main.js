@@ -25,6 +25,7 @@ function get_positions() {
         type: "GET",
         success: function(data) {
             old_positions_array = positions_array;
+            current_interpolate_position_array = positions_array.split(".");
             positions_array = data.split(".");
             total_positions = positions_array.length;
         }
@@ -71,11 +72,14 @@ function interpolate_calculate() {
 }
 function move_others() {
     for (let i = 0; i < total_positions; i++) {
-        var temp_array = positions_array[i];
-        current_position_array = temp_array.split(",");
+        temp_array = current_interpolate_position_array[i].split(",");
+        temp_array_2 = interpolate_array[i].split(",");
+        temp_array[0] = temp_array[0] + temp_array_2[0];
+        temp_array[1] = temp_array[1] + temp_array_2[1];
+        current_interpolate_position_array[i] = temp_array[0] + "," + temp_array[1];
         ctx.beginPath();
         ctx.lineWidth = "4";
-        ctx.rect(current_position_array[0],current_position_array[1],10,10);
+        ctx.rect(current_interpolate_position_array[0],current_interpolate_position_array[1],10,10);
         ctx.stroke();
     }
 }
