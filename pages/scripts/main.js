@@ -86,7 +86,6 @@ function move_others() {
 function main_game_loop() {
     ctx.clearRect(0,0,c.width,c.height);
     move_player();
-    interpolate();
     get_loop = get_loop + 1;
     if (get_loop == get_delay) {
         get_positions();
