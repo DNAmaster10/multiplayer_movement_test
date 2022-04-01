@@ -69,6 +69,8 @@ function interpolate_calculate() {
         var temp_array_2 = positions_array[i].split(",");
         transition_x = (temp_array_2[0] - temp_array[0]) / get_delay;
         transtion_y = (temp_array_2[1] - temp_array[1]) / get_delay;
+        console.log(transition_x);
+        console.log(transition_y);
         temp = transition_x.toString() + "," + transition_y.toString();
         interpolate_array.push(temp);
         console.log(interpolate_array);
