@@ -72,6 +72,10 @@ function interpolate_calculate() {
         temp_array_2 = positions_array[i].split(",");
         dx = (temp_array_2[0] - temp_array[0]);
         dy = (temp_array_2[1] - temp_array[1]);
+        dx_per = (dx / get_delay);
+        dx_per = math.round(dx_per);
+        dy_per = (dy / get_delay);
+        dy_per = math.round(dy_per);
         console.log("dx = " + dx);
         console.log("dy = " + dy);
         temp = dx + "," + dy;
@@ -81,8 +85,8 @@ function interpolate_calculate() {
 }
 function move_others() {
     for (let i = 0; i < total_positions - 1; i++) {
-        temp_array = current_interpolate_positions_array[i].split(",");
-        temp_array_2 = interpolate_array[i].split(",");
+        a_temp_array = current_interpolate_positions_array[i].split(",");
+        a_temp_array_2 = interpolate_array[i].split(",");
         new_x = temp_array[0] + temp_array_2[0];
         new_y = temp_array[1] + temp_array_2[1];
         temp = new_x + "," + new_y;
