@@ -63,10 +63,12 @@ function get_positions() {
             current_interpolate_positions_array = positions_array;
             console.log("After get: " + current_interpolate_positions_array);
             total_positions = positions_array.length;
+            interpolate_array = [];
         }
     });
 }
 function interpolate_calculate() {
+    interpolate_array = [];
     for (let i = 0; i < total_positions -1; i++) {
         temp_array = old_positions_array[i].split(",");
         temp_array_2 = positions_array[i].split(",");
@@ -79,7 +81,7 @@ function interpolate_calculate() {
         console.log("dx = " + dx);
         console.log("dy = " + dy);
         temp = dx + "," + dy;
-        interpolate_array[i] = temp;
+        interpolate_array.push(temp);
         console.log("Interpolate array: " + interpolate_array);
     }
 }
