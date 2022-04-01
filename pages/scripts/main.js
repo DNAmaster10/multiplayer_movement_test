@@ -87,7 +87,20 @@ function interpolate_calculate() {
 }
 function move_others() {
     for (let i = 0; i < total_positions - 1; i++) {
-
+        var this_interpolation_ammount = interpolation_ammount[i].split(",");
+        var this_interpolation_x = parseInt(this_interpolation_ammount[0]);
+        var this_interpolation_y = parseInt(this_interpolation_ammount[1]);
+        var this_pos = positions_array[i].split(",");
+        var this_pos_x = parseInt(this_pos[0]);
+        var this_pos_y = parseInt(this_pos[1]);
+        var this_new_pos_x = this_pos_x + this_interpolation_x;
+        var this_new_pos_y = this_pos_y + this_interpolation_y;
+        var this_new_pos = String(this_pos_x) + "," + String(this_pos_y);
+        positions_array[i] = this_new_pos;
+        ctx.beginPath();
+        ctx.lineWidth = "4";
+        ctx.rect(this_new_pos_x,this_new_pos_y,10,10);
+        ctx.stroke();
     }
 }
 function main_game_loop() {
