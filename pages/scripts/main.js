@@ -64,6 +64,9 @@ function get_positions() {
             console.log("After get: " + current_interpolate_positions_array);
             total_positions = positions_array.length;
             interpolate_array = [];
+            dy = 0;
+            dx = 0;
+
         }
     });
 }
