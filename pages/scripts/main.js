@@ -66,6 +66,7 @@ function get_positions() {
             interpolate_array = [];
             dy = 0;
             dx = 0;
+            temp = "";
 
         }
     });
