@@ -74,7 +74,7 @@ function interpolate_calculate() {
         dy = (temp_array_2[1] - temp_array[1]);
         console.log("dx = " + dx);
         console.log("dy = " + dy);
-        temp = dy + "," + dx;
+        temp = dx + "," + dy;
         interpolate_array[i] = temp;
         console.log("Interpolate array: " + interpolate_array);
     }
