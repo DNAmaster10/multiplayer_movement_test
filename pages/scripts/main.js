@@ -76,8 +76,8 @@ function interpolate_calculate() {
     for (let i = 0; i < total_positions -1; i++) {
         temp_array = old_positions_array[i].split(",");
         temp_array_2 = positions_array[i].split(",");
-        dx = (parseInt(temp_array_2[0]) - parseInt(temp_array[0]));
-        dy = (parseInt(temp_array_2[1]) - parseInt(temp_array[1]));
+        dx = ((parseInt(temp_array_2[0]) - parseInt(temp_array[0])) * -1);
+        dy = ((parseInt(temp_array_2[1]) - parseInt(temp_array[1])) * -1);
         dx_per = (dx / get_delay);
         dx_per = Math.round(dx_per);
         dy_per = (dy / get_delay);
