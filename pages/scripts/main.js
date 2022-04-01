@@ -4,8 +4,14 @@ var player_x = 10;
 var player_y = 10;
 var total_positions = 4;
 var positions_array = [0,0];
-var interpoldate_array = [0,0];
+var interpolate_array = [0,0];
 var get_loop = 0;
+var transition_x = 0;
+var transition_y = 0;
+var temp = "";
+var current_interpolate_position_array = [];
+var get_delay = 50;
+var loop_delay = 10;
 $.ajax({
         url: './get_positions.php',
         type: "GET",
@@ -18,6 +24,7 @@ function get_positions() {
         url: './get_positions.php',
         type: "GET",
         success: function(data) {
+            old_positions_array = positions_array;
             positions_array = data.split(".");
             total_positions = positions_array.length;
         }
@@ -50,22 +57,37 @@ function send_player() {
         data: {player_x:player_x, player_y:player_y}
     });
 }
-function interpolate() {
+function interpolate_calculate() {
+    old_positions_array[i];
+    interpolate_array = [];
     for (let i = 0; i < total_positions; i++) {
-        var temp_array = 
+        temp_array = old_positions_array.split(",");
+        var temp_array_2 = positions_array[i].split(",");
+        transition_x = (temp_array_2[0] - temp_array[0]) / get_delay;
+        transtion_y = (temp_array_2[1] - temp_array[1]) / get_delay;
+        temp = transition_x.toString() + "," + transition_y.toString();
+        interpolate_array.push(temp);
     }
 }
 function move_others() {
-    
+    for (let i = 0; i < total_positions; i++) {
+        var temp_array = positions_array[i];
+        current_position_array = temp_array.split(",");
+        ctx.beginPath();
+        ctx.lineWidth = "4";
+        ctx.rect(current_position_array[0],current_position_array[1],10,10);
+        ctx.stroke();
+    }
 }
 function main_game_loop() {
     ctx.clearRect(0,0,c.width,c.height);
     move_player();
+    interpolate();
     get_loop = get_loop + 1;
-    if (get_loop == 50) {
+    if (get_loop == get_delay) {
         get_positions();
+        interpolate_calculate();
         send_player();
-        interpolate();
         get_loop = 0;
     }
     for (let i = 0; i < total_positions; i++) {
@@ -79,4 +101,4 @@ function main_game_loop() {
     move_others();
     ctx.stroke();
 }
-setInterval(main_game_loop, 10);
+setInterval(main_game_loop, loop_delay);
