@@ -93,6 +93,7 @@ function move_others() {
         ctx.rect(new_x,new_y,10,10);
         ctx.stroke();
         current_interpolate_positions_array[i] = temp;
+        console.log("After move others :" + current_interpolate_positions_array);
     }
     current_interpolate_position = [];
 }
