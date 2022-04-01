@@ -62,11 +62,10 @@ function send_player() {
     });
 }
 function interpolate_calculate() {
-    old_positions_array[i];
     interpolate_array = [];
     for (let i = 0; i < total_positions; i++) {
-        temp_array = old_positions_array.split(",");
-        var temp_array_2 = positions_array[i].split(",");
+        temp_array = old_positions_array[i].split(",");
+        temp_array_2 = positions_array[i].split(",");
         transition_x = (temp_array_2[0] - temp_array[0]) / get_delay;
         transtion_y = (temp_array_2[1] - temp_array[1]) / get_delay;
         console.log(transition_x);
