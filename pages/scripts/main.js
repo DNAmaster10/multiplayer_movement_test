@@ -102,6 +102,7 @@ function move_others() {
         ctx.lineWidth = "4";
         ctx.rect(this_new_pos_x,this_new_pos_y,10,10);
         ctx.stroke();
+        console.log(this_new_pos_x + this_new_pos_y);
     }
 }
 function main_game_loop() {
