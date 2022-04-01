@@ -84,6 +84,7 @@ function move_others() {
         ctx.lineWidth = "4";
         ctx.rect(current_interpolate_position_array[0],current_interpolate_position_array[1],10,10);
         ctx.stroke();
+        console.log(current_interpolate_position_array);
     }
 }
 function main_game_loop() {
