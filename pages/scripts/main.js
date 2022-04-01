@@ -94,7 +94,6 @@ function move_others() {
         current_interpolate_positions_array[i] = temp;
         console.log("After move others :" + current_interpolate_positions_array);
     }
-    current_interpolate_position = [];
 }
 function main_game_loop() {
     ctx.clearRect(0,0,c.width,c.height);
