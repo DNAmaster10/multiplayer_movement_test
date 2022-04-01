@@ -28,8 +28,8 @@ function get_positions() {
         type: "GET",
         success: function(data) {
             old_positions_array = positions_array;
-            current_interpolate_position_array = positions_array.split(".");
             positions_array = data.split(".");
+            current_interpolate_position_array = positions_array;
             total_positions = positions_array.length;
         }
     });
