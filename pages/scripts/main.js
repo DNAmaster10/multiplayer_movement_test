@@ -4,6 +4,7 @@ var player_x = 10;
 var player_y = 10;
 var total_positions = 4;
 var positions_array = [0,0];
+var interpoldate_array = [0,0];
 var get_loop = 0;
 $.ajax({
         url: './get_positions.php',
@@ -36,9 +37,6 @@ document.addEventListener("keydown", (event) => {
         player_x = player_x + 5;
     }
 })
-function move_down() {
-    player_y = player_y - 10;
-}
 function move_player() {
     ctx.beginPath();
     ctx.lineWidth = "4";
@@ -52,6 +50,14 @@ function send_player() {
         data: {player_x:player_x, player_y:player_y}
     });
 }
+function interpolate() {
+    for (let i = 0; i < total_positions; i++) {
+        var temp_array = 
+    }
+}
+function move_others() {
+    
+}
 function main_game_loop() {
     ctx.clearRect(0,0,c.width,c.height);
     move_player();
@@ -59,6 +65,7 @@ function main_game_loop() {
     if (get_loop == 50) {
         get_positions();
         send_player();
+        interpolate();
         get_loop = 0;
     }
     for (let i = 0; i < total_positions; i++) {
@@ -69,6 +76,7 @@ function main_game_loop() {
         ctx.rect(current_position_array[0],current_position_array[1],10,10);
         ctx.stroke();
         }
+    move_others();
     ctx.stroke();
 }
 setInterval(main_game_loop, 10);
