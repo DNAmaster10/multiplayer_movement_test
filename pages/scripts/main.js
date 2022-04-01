@@ -56,12 +56,12 @@ function main_game_loop() {
     ctx.clearRect(0,0,c.width,c.height);
     move_player();
     get_loop = get_loop + 1;
-    if (get_loop == 1) {
+    if (get_loop == 50) {
         get_positions();
         send_player();
         get_loop = 0;
     }
-    for (let i = 50; i < total_positions; i++) {
+    for (let i = 0; i < total_positions; i++) {
         var temp_array = positions_array[i];
         current_position_array = temp_array.split(",");
         ctx.beginPath();
