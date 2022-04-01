@@ -66,7 +66,7 @@ function get_positions() {
     });
 }
 function interpolate_calculate() {
-    interpolation_ammount = [];
+    var interpolation_ammount = [];
     for (let i = 0; i < total_positions -1; i++) {
         var this_old_pos_array = old_positions_array[i].split(",");
         var this_new_pos_array = positions_array[i].split(",");
@@ -77,7 +77,7 @@ function interpolate_calculate() {
         var change_in_x = (this_new_x - this_old_x) * -1;
         var change_in_y = (this_new_y - this_old_y) * -1;
         var change_in_x_chane_in_y = String(change_in_x) + "," + String(change_in_y);
-        var interpolation_ammount.push(change_in_x_chane_in_y);
+        interpolation_ammount.push(change_in_x_chane_in_y);
         console.log(interpolation_ammount);
     }
 }
