@@ -56,7 +56,7 @@ function main_game_loop() {
     ctx.clearRect(0,0,c.width,c.height);
     move_player();
     get_loop = get_loop + 1;
-    if (get_loop == 50) {
+    if (get_loop == 1) {
         get_positions();
         send_player();
         get_loop = 0;
