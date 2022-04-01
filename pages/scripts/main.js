@@ -12,6 +12,8 @@ var temp = "";
 var current_interpolate_position_array = [];
 var get_delay = 50;
 var loop_delay = 10;
+var temp_array = [];
+var temp_array_2 = [];
 $.ajax({
         url: './get_positions.php',
         type: "GET",
