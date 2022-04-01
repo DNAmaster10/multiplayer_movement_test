@@ -87,7 +87,7 @@ function interpolate_calculate() {
     console.log(interpolation_ammount);
 }
 function move_others() {
-    for (let i = 0; i < total_positions; i++) {
+    for (let i = 0; i < total_positions - 1; i++) {
         var this_interpolation_ammount = interpolation_ammount[i].split(",");
         var this_interpolation_x = parseInt(this_interpolation_ammount[0]);
         var this_interpolation_y = parseInt(this_interpolation_ammount[1]);
