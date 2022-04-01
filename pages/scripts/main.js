@@ -60,6 +60,7 @@ function get_positions() {
         success: function(data) {
             old_positions_array = positions_array;
             positions_array = data.split(".");
+            current_interpolate_position_array = positions_array;
             total_positions = positions_array.length;
         }
     });
