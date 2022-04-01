@@ -23,18 +23,6 @@ $.ajax({
 
         }
 });
-function get_positions() {
-    $.ajax({
-        url: './get_positions.php',
-        type: "GET",
-        success: function(data) {
-            old_positions_array = positions_array;
-            positions_array = data.split(".");
-            current_interpolate_position_array = positions_array;
-            total_positions = positions_array.length;
-        }
-    });
-}
 document.addEventListener("keydown", (event) => {
     if(event.key === "w") {
         player_y = player_y - 5;
@@ -62,36 +50,32 @@ function send_player() {
         data: {player_x:player_x, player_y:player_y}
     });
 }
+function get_positions() {
+    $.ajax({
+        url: './get_positions.php',
+        type: "GET",
+        success: function(data) {
+            old_positions_array = positions_array;
+            positions_array = data.split(".");
+            total_positions = positions_array.length;
+        }
+    });
+}
 function interpolate_calculate() {
     interpolate_array = [];
-    console.log(old_positions_array);
     for (let i = 0; i < total_positions; i++) {
         temp_array = old_positions_array[i].split(",");
         temp_array_2 = positions_array[i].split(",");
-        transition_x = (temp_array_2[0] - temp_array[0]) / get_delay;
-        transtion_y = (temp_array_2[1] - temp_array[1]) / get_delay;
-        console.log(transition_x);
-        console.log(transition_y);
-        temp = transition_x.toString() + "," + transition_y.toString();
+        dx = (temp_array_2[0] - temp_array[0]);
+        dy = (temp_array_2[1] - temp_array[1]);
+        temp = dy + "," + dx;
         interpolate_array.push(temp);
         console.log(interpolate_array);
     }
 }
 function move_others() {
     for (let i = 0; i < total_positions; i++) {
-        temp_array = current_interpolate_position_array[i].split(",");
-        temp = interpolate_array[i];
-        console.log(temp);
-        console.log(interpolate_array);
-        temp_array_2 = temp.split(",");
-        temp_array[0] = temp_array[0] + temp_array_2[0];
-        temp_array[1] = temp_array[1] + temp_array_2[1];
-        current_interpolate_position_array[i] = temp_array[0] + "," + temp_array[1];
-        ctx.beginPath();
-        ctx.lineWidth = "4";
-        ctx.rect(current_interpolate_position_array[0],current_interpolate_position_array[1],10,10);
-        ctx.stroke();
-        console.log(current_interpolate_position_array);
+
     }
 }
 function main_game_loop() {
