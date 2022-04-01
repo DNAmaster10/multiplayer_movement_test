@@ -78,6 +78,7 @@ function move_others() {
     for (let i = 0; i < total_positions; i++) {
         temp_array = current_interpolate_position_array[i].split(",");
         temp = interpolate_array[i];
+        console.log(temp);
         temp_array_2 = temp.split(",");
         temp_array[0] = temp_array[0] + temp_array_2[0];
         temp_array[1] = temp_array[1] + temp_array_2[1];
