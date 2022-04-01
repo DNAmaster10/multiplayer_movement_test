@@ -57,6 +57,8 @@ function get_positions() {
         type: "GET",
         success: function(data) {
             old_positions_array = positions_array;
+            console.log(positions_array);
+            console.log(old_positions_array);
             positions_array = data.split(".");
             total_positions = positions_array.length;
         }
