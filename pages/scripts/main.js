@@ -60,50 +60,29 @@ function get_positions() {
         success: function(data) {
             old_positions_array = positions_array;
             positions_array = data.split(".");
-            current_interpolate_positions_array = positions_array;
-            console.log("After get: " + current_interpolate_positions_array);
             total_positions = positions_array.length;
-            dy = 0;
-            dx = 0;
-            temp = "";
 
         }
     });
 }
 function interpolate_calculate() {
-    interpolate_array = [];
+    interpolation_ammount = [];
     for (let i = 0; i < total_positions -1; i++) {
-        temp_array = old_positions_array[i].split(",");
-        temp_array_2 = positions_array[i].split(",");
-        dx = ((parseInt(temp_array_2[0]) - parseInt(temp_array[0])) * -1);
-        dy = ((parseInt(temp_array_2[1]) - parseInt(temp_array[1])) * -1);
-        dx_per = (dx / get_delay);
-        dx_per = Math.round(dx_per);
-        dy_per = (dy / get_delay);
-        dy_per = Math.round(dy_per);
-        console.log("dx = " + dx);
-        console.log("dy = " + dy);
-        temp = dx + "," + dy;
-        interpolate_array.push(temp);
-        console.log("Interpolate array: " + interpolate_array);
+        var this_old_pos_array = old_positions_array[i].split(",");
+        var this_new_pos_array = positions_array[i].split(",");
+        var this_old_x = parseInt(this_old_pos_array[0]);
+        var this_old_y = parseInt(this_old_pos_array[1]);
+        var this_new_x = parseInt(this_new_pos_array[0]);
+        var this_new_y = parseInt(this_new_pos_array[1]);
+        var change_in_x = (this_new_x - this_old_x) * -1;
+        var change_in_y = (this_new_y - this_old_y) * -1;
+        var change_in_x_chane_in_y = String(change_in_x) + "," + String(change_in_y);
+        var interpolation_ammount.push(change_in_x_chane_in_y);
     }
 }
 function move_others() {
     for (let i = 0; i < total_positions - 1; i++) {
-        temp_array = current_interpolate_positions_array[i].split(",");
-        temp_array_2 = interpolate_array[i].split(",");
-        new_x = parseInt(temp_array[0]) + parseInt(temp_array_2[0]);
-        new_y = parseInt(temp_array[1]) + parseInt(temp_array_2[1]);
-        temp = new_x + "," + new_y;
-        temp = temp.replace("N","");
-        temp = temp.replace("a","");
-        console.log("temp value " + temp);
-        ctx.beginPath();
-        ctx.lineWidth = "4";
-        ctx.rect(new_x,new_y,10,10);
-        ctx.stroke();
-        current_interpolate_positions_array[i] = temp;
-        console.log("After move others :" + current_interpolate_positions_array);
+
     }
 }
 function main_game_loop() {
