@@ -12,7 +12,7 @@ var temp = "";
 var current_interpolate_position_array = [];
 //get_delay is multiplied by loop_delay
 var get_delay = 3;
-var loop_delay = 1000;
+var loop_delay = 500;
 var temp_array = [];
 var temp_array_2 = [];
 var temp = "null";
