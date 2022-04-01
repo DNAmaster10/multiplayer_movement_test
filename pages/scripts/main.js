@@ -17,6 +17,8 @@ var temp_array = [];
 var temp_array_2 = [];
 var temp = "null";
 var old_positions_array = [];
+var new_x = 0;
+var new_y = 0;
 $.ajax({
         url: './get_positions.php',
         type: "GET",
@@ -76,7 +78,16 @@ function interpolate_calculate() {
 }
 function move_others() {
     for (let i = 0; i < total_positions; i++) {
-
+        temp_array = current_interpolate_position_array[i].split(",");
+        temp_array_2 = interpolate_array[i].split(",");
+        new_x = temp_array[0] + temp_array_2[0];
+        new_y = temp_array[1] + temp_array_2[1];
+        temp = new_x + "," + new_y;
+        ctx.beginPath();
+        ctx.lineWidth = "4";
+        ctx.rect(new_x,new_y,10,10);
+        ctx.stroke();
+        current_interpolat_positions_array[i] = temp;
     }
 }
 function main_game_loop() {
