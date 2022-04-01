@@ -100,6 +100,7 @@ function main_game_loop() {
         ctx.stroke();
         }
     }
+    console.log(get_loop);
     move_others();
     ctx.stroke();
 }
