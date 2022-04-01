@@ -86,6 +86,7 @@ function main_game_loop() {
     move_player();
     get_loop = get_loop + 1;
     if (get_loop == get_delay) {
+        console.log("getting players positions");
         get_positions();
         interpolate_calculate();
         send_player();
