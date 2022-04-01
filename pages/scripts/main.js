@@ -57,8 +57,6 @@ function get_positions() {
         type: "GET",
         success: function(data) {
             old_positions_array = positions_array;
-            console.log(positions_array);
-            console.log(old_positions_array);
             positions_array = data.split(".");
             total_positions = positions_array.length;
         }
@@ -73,7 +71,7 @@ function interpolate_calculate() {
         dy = (temp_array_2[1] - temp_array[1]);
         temp = dy + "," + dx;
         interpolate_array.push(temp);
-        console.log(interpolate_array);
+        console.log("Interpolate array: " + interpolate_array);
     }
 }
 function move_others() {
@@ -100,7 +98,6 @@ function main_game_loop() {
         ctx.stroke();
         }
     }
-    console.log(get_loop);
     move_others();
     ctx.stroke();
 }
