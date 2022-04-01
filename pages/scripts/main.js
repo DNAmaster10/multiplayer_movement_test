@@ -15,6 +15,7 @@ var get_delay = 2;
 var loop_delay = 500;
 var temp_array = [];
 var temp_array_2 = [];
+var temp = "";
 $.ajax({
         url: './get_positions.php',
         type: "GET",
