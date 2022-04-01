@@ -80,7 +80,7 @@ function interpolate_calculate() {
         average_change_in_x = Math.round(average_change_in_x);
         var average_change_in_y = (change_in_y) / get_delay;
         average_change_in_y = Math.round(average_change_in_y);
-        var change_in_x_chane_in_y_average = String(average_change_in_x) + "," + String(average_change_in_y);
+        var change_in_x_change_in_y_average = String(average_change_in_x) + "," + String(average_change_in_y);
         interpolation_ammount.push(change_in_x_chane_in_y);
         console.log(interpolation_ammount);
     }
