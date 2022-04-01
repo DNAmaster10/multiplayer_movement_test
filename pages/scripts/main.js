@@ -97,7 +97,7 @@ function main_game_loop() {
     }
     for (let i = 0; i < total_positions; i++) {
         var temp_array = positions_array[i];
-        current_position_array = temp_array.split(",");
+        current_position_array = temp_array[i].split(",");
         ctx.beginPath();
         ctx.lineWidth = "4";
         ctx.rect(current_position_array[0],current_position_array[1],10,10);
