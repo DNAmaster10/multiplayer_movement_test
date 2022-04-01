@@ -68,7 +68,7 @@ function get_positions() {
 }
 function interpolate_calculate() {
     interpolate_array = [];
-    for (let i = 0; i < total_positions - 1; i++) {
+    for (let i = 0; i < total_positions; i++) {
         temp_array = old_positions_array[i].split(",");
         temp_array_2 = positions_array[i].split(",");
         dx = (temp_array_2[0] - temp_array[0]);
@@ -81,7 +81,7 @@ function interpolate_calculate() {
     }
 }
 function move_others() {
-    for (let i = 0; i < total_positions - 1; i++) {
+    for (let i = 0; i < total_positions; i++) {
         temp_array = current_interpolate_positions_array[i].split(",");
         temp_array_2 = interpolate_array[i].split(",");
         new_x = temp_array[0] + temp_array_2[0];
