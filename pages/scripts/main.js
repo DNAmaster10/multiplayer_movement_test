@@ -11,8 +11,8 @@ var transition_y = 0;
 var temp = "";
 var current_interpolate_position_array = [];
 //get_delay is multiplied by loop_delay
-var get_delay = 2;
-var loop_delay = 500;
+var get_delay = 50;
+var loop_delay = 10;
 var temp_array = [];
 var temp_array_2 = [];
 var temp = "null";
