@@ -77,7 +77,7 @@ function interpolate_calculate() {
         var change_in_x = (this_new_x - this_old_x);
         var change_in_y = (this_new_y - this_old_y);
         var average_change_in_x = (change_in_x) / get_delay;
-        average_change_in_x = Math.round(average_change_in_x));
+        average_change_in_x = Math.round(average_change_in_x);
         var average_change_in_y = (change_in_y) / get_delay;
         average_change_in_y = Math.round(average_change_in_y);
         var change_in_x_chane_in_y_average = String(average_change_in_x) + "," + String(average_change_in_y);
