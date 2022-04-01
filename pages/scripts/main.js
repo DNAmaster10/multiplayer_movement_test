@@ -10,6 +10,7 @@ var transition_x = 0;
 var transition_y = 0;
 var temp = "";
 var current_interpolate_position_array = [];
+//get_delay is multiplied by loop_delay
 var get_delay = 50;
 var loop_delay = 10;
 var temp_array = [];
@@ -94,15 +95,15 @@ function main_game_loop() {
         interpolate_calculate();
         send_player();
         get_loop = 0;
-    }
     for (let i = 0; i < total_positions; i++) {
-        var temp_array = positions_array[i];
-        current_position_array = temp_array[i].split(",");
+        var temp = positions_array[i];
+        current_position_array = temp.split(",");
         ctx.beginPath();
         ctx.lineWidth = "4";
         ctx.rect(current_position_array[0],current_position_array[1],10,10);
         ctx.stroke();
         }
+    }
     move_others();
     ctx.stroke();
 }
