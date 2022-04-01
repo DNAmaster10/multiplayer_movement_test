@@ -78,6 +78,7 @@ function interpolate_calculate() {
         var change_in_y = (this_new_y - this_old_y) * -1;
         var change_in_x_chane_in_y = String(change_in_x) + "," + String(change_in_y);
         var interpolation_ammount.push(change_in_x_chane_in_y);
+        console.log(interpolation_ammount);
     }
 }
 function move_others() {
