@@ -91,15 +91,12 @@ function main_game_loop() {
     move_player();
     get_loop = get_loop + 1;
     if (get_loop == get_delay) {
-        interpolate_array = [];
         get_loop = 0;
         console.log("getting players positions");
         get_positions();
         interpolate_calculate();
         send_player();
     for (let i = 0; i < total_positions; i++) {
-        var temp = positions_array[i];
-        current_position_array = temp.split(",");
         ctx.beginPath();
         ctx.lineWidth = "4";
         ctx.rect(current_position_array[0],current_position_array[1],10,10);
