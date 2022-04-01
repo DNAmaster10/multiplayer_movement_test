@@ -79,7 +79,7 @@ function interpolate_calculate() {
 }
 function move_others() {
     for (let i = 0; i < total_positions; i++) {
-        temp_array = current_interpolate_position_array[i].split(",");
+        temp_array = current_interpolate_positions_array[i].split(",");
         temp_array_2 = interpolate_array[i].split(",");
         new_x = temp_array[0] + temp_array_2[0];
         new_y = temp_array[1] + temp_array_2[1];
