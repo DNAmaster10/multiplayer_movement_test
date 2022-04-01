@@ -61,6 +61,7 @@ function get_positions() {
             old_positions_array = positions_array;
             positions_array = data.split(".");
             current_interpolate_positions_array = positions_array;
+            console.log("After get: " + current_interpolate_positions_array);
             total_positions = positions_array.length;
         }
     });
