@@ -92,7 +92,7 @@ function move_others() {
         ctx.lineWidth = "4";
         ctx.rect(new_x,new_y,10,10);
         ctx.stroke();
-        //current_interpolate_positions_array[i] = temp;
+        current_interpolate_positions_array[i] = temp;
     }
     current_interpolate_position = [];
 }
