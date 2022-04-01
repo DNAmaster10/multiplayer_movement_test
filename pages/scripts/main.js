@@ -68,7 +68,7 @@ function get_positions() {
 }
 function interpolate_calculate() {
     interpolate_array = [];
-    for (let i = 0; i < total_positions; i++) {
+    for (let i = 0; i < total_positions - 1; i++) {
         temp_array = old_positions_array[i].split(",");
         temp_array_2 = positions_array[i].split(",");
         dx = (temp_array_2[0] - temp_array[0]);
