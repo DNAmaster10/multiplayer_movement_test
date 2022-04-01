@@ -90,6 +90,8 @@ function move_others() {
         new_x = temp_array[0] + temp_array_2[0];
         new_y = temp_array[1] + temp_array_2[1];
         temp = new_x + "," + new_y;
+        temp = str.replace("N","");
+        temp = str.replace("a","");
         console.log("temp value " + temp);
         ctx.beginPath();
         ctx.lineWidth = "4";
