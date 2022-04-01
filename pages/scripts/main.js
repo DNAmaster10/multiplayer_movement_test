@@ -81,7 +81,7 @@ function interpolate_calculate() {
     }
 }
 function move_others() {
-    for (let i = 0; i < total_positions - 2; i++) {
+    for (let i = 0; i < total_positions - 1; i++) {
         temp_array = current_interpolate_positions_array[i].split(",");
         temp_array_2 = interpolate_array[i].split(",");
         new_x = temp_array[0] + temp_array_2[0];
@@ -92,7 +92,7 @@ function move_others() {
         ctx.lineWidth = "4";
         ctx.rect(new_x,new_y,10,10);
         ctx.stroke();
-        current_interpolate_positions_array[i] = temp;
+        //current_interpolate_positions_array[i] = temp;
     }
     current_interpolate_position = [];
 }
