@@ -63,7 +63,6 @@ function get_positions() {
             current_interpolate_positions_array = positions_array;
             console.log("After get: " + current_interpolate_positions_array);
             total_positions = positions_array.length;
-            interpolate_array = [];
             dy = 0;
             dx = 0;
             temp = "";
@@ -112,6 +111,7 @@ function main_game_loop() {
     move_player();
     get_loop = get_loop + 1;
     if (get_loop == get_delay) {
+        interpolate_array = [];
         get_loop = 0;
         console.log("getting players positions");
         get_positions();
