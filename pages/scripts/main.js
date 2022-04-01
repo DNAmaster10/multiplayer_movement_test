@@ -118,7 +118,7 @@ function main_game_loop() {
         ctx.stroke();
         }
     }
-    //move_others();
+    move_others();
     ctx.stroke();
 }
 setInterval(main_game_loop, loop_delay);
