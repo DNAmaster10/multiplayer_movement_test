@@ -70,8 +70,8 @@ function interpolate_calculate() {
     for (let i = 0; i < total_positions -1; i++) {
         temp_array = old_positions_array[i].split(",");
         temp_array_2 = positions_array[i].split(",");
-        dx = (temp_array_2[0] - temp_array[0]);
-        dy = (temp_array_2[1] - temp_array[1]);
+        dx = (parseInt(temp_array_2[0]) - parseInt(temp_array[0]));
+        dy = (parseInt(temp_array_2[1]) - parseInt(temp_array[1]));
         dx_per = (dx / get_delay);
         dx_per = Math.round(dx_per);
         dy_per = (dy / get_delay);
@@ -87,8 +87,8 @@ function move_others() {
     for (let i = 0; i < total_positions - 1; i++) {
         temp_array = current_interpolate_positions_array[i].split(",");
         temp_array_2 = interpolate_array[i].split(",");
-        new_x = temp_array[0] + temp_array_2[0];
-        new_y = temp_array[1] + temp_array_2[1];
+        new_x = parseInt(temp_array[0]) + parseInt(temp_array_2[0]);
+        new_y = parseInt(temp_array[1]) + parseInt(temp_array_2[1]);
         temp = new_x + "," + new_y;
         temp = temp.replace("N","");
         temp = temp.replace("a","");
