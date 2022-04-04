@@ -105,6 +105,7 @@ function update_others() {
     if (get_request_delay == loop_count ) {
         get_other_positions();
     }
+    time.sleep(100)
     if (get_request_delay == loop_count) {
         calculate_vectors();
     }
