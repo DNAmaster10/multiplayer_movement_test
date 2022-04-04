@@ -4,6 +4,8 @@ var ctx = c.getContext("2d");
 var get_request_delay = 3;
 var main_game_loop_delay = 1000;
 var other_player_vectors = [0];
+player_x = 10;
+player_y = 10
 
 document.addEventListener("keydown", (event) => {
     if(event.key === "w") {
