@@ -100,9 +100,11 @@ function move_others() {
 }
 function update_others() {
     loop_count = loop_count + 1;
-    if (get_request_delay == loop_count) {
+    if (get_request_delay == loop_count - 1) {
         send_player_position();
         get_other_positions();
+    }
+    if (get_request_delay == loop_count) {
         calculate_vectors();
     }
     var other_players_ammount = other_player_positions_array.length;
