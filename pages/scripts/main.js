@@ -44,7 +44,7 @@ function get_other_positions() {
         success: function(data) {
             var old_other_player_positions_array = other_player_positions_array;
             var other_player_positions_array = data.split(".");
-            var other_players_ammount = other_player_positions_array.length;
+            other_players_ammount = other_player_positions_array.length;
             console.log("Other players are located at: " + other_player_positions_array);
         }
     });
