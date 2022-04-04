@@ -11,7 +11,7 @@ var other_player_positions_array = [];
 var other_players_ammount = 0;
 var current_player_positoon = ["0,0"];
 var other_player_vectors = ["0,0"];
-var current_
+var current_player_vector = ["0,0"];
 
 document.addEventListener("keydown", (event) => {
     if(event.key === "w") {
