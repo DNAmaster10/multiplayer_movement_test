@@ -7,11 +7,11 @@ var other_player_vectors = [0];
 var player_x = 10;
 var player_y = 10;
 var loop_count = 0;
-var other_player_positions_array = [];
+var other_player_positions_array = ["0,0"];
 var other_players_ammount = 0;
 var current_player_positoon = ["0,0"];
 var other_player_vectors = ["0,0"];
-var current_player_vector = ["0,0"];
+var current_player_vector = ["1,1"];
 var old_other_player_positions_array = [];
 
 document.addEventListener("keydown", (event) => {
