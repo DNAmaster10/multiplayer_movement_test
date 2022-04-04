@@ -105,7 +105,6 @@ function update_others() {
     if (get_request_delay == loop_count ) {
         get_other_positions();
     }
-    await new Promise(r => setTimeout(r, 100));
     if (get_request_delay == loop_count) {
         calculate_vectors();
     }
