@@ -3,6 +3,7 @@ var ctx = c.getContext("2d");
 //This is multiplied by the main game loop delay
 var get_request_delay = 50;
 var main_game_loop_delay = 10;
+var other_player_vectors = [0];
 
 document.addEventListener("keydown", (event) => {
     if(event.key === "w") {
