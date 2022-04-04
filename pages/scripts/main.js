@@ -53,14 +53,14 @@ function get_other_positions() {
 function calculate_vectors() {
     for (let i = 0; i < other_players_ammount; i++) {
         current_player_position = other_player_positions_array[i].split(",");
-        var old_current_player_position = old_other_player_positions_array.split(",");
-        var old_current_player_x = old_current_player_position[0];
-        var old_current_player_y = old_current_player_position[1];
-        var current_player_x = current_player_position[0];
-        var current_player_y = current_player_position[1];
-        var current_player_x_change = current_player_x - old_current_player_x;
-        var current_player_y_change = current_player_y - old_current_player_y;
-        var vector_string = "";
+        old_current_player_position = old_other_player_positions_array.split(",");
+        old_current_player_x = old_current_player_position[0];
+        old_current_player_y = old_current_player_position[1];
+        current_player_x = current_player_position[0];
+        current_player_y = current_player_position[1];
+        current_player_x_change = current_player_x - old_current_player_x;
+        current_player_y_change = current_player_y - old_current_player_y;
+        vector_string = "";
         if (current_player_x_change > 0) {
             vector_x = current_player_x_change / get_request_delay;
             vector_string = vector_x + ",";
@@ -80,11 +80,11 @@ function calculate_vectors() {
 }
 function move_others() {
     for (let i = 0; i = other_players_ammount; i++) {
-        var current_player_vector = other_player_vectors[i].split(",");
-        var current_player_position = other_player_positions_array[i].split(",");
-        var current_player_position_new_x = current_player_position[0] + current_player_vector[0];
-        var current_player_position_new_y = current_player_position[1] + current_player_bector[1];
-        var new_player_position = current_player_position_new_x + "," + current_player_position_new_y;
+        current_player_vector = other_player_vectors[i].split(",");
+        current_player_position = other_player_positions_array[i].split(",");
+        current_player_position_new_x = current_player_position[0] + current_player_vector[0];
+        current_player_position_new_y = current_player_position[1] + current_player_bector[1];
+        new_player_position = current_player_position_new_x + "," + current_player_position_new_y;
         other_player_positions_array[i] = new_player_position;
         console.log("Drawing other players at: " + new_player_position);
         ctx.beginPath();
