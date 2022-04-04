@@ -9,6 +9,7 @@ var player_y = 10;
 var loop_count = 0;
 var other_player_positions_array = [];
 var other_players_ammount = 0;
+var current_player_positoon = ["0,0"];
 
 document.addEventListener("keydown", (event) => {
     if(event.key === "w") {
@@ -51,7 +52,7 @@ function get_other_positions() {
 }
 function calculate_vectors() {
     for (let i = 0; i < other_players_ammount; i++) {
-        var current_player_position = other_player_positions_array[i].split(",");
+        current_player_position = other_player_positions_array[i].split(",");
         var old_current_player_position = old_other_player_positions_array.split(",");
         var old_current_player_x = old_current_player_position[0];
         var old_current_player_y = old_current_player_position[1];
