@@ -94,7 +94,7 @@ function update_others() {
         get_other_positions();
         calculate_vectors();
     }
-    var other_players_ammount = other_player_possitions_array.length;
+    var other_players_ammount = other_player_positions_array.length;
     if (other_players_ammount > 0) {
         move_others();
     }
