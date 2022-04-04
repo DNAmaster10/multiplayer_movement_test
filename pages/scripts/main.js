@@ -67,7 +67,7 @@ function calculate_vectors() {
         else {
             vector_string = vector_string + "0";
         }
-        var other_player_vectors[i] = vector_string;
+        other_player_vectors[i] = vector_string;
     }
 }
 function move_others();
