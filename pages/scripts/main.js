@@ -8,6 +8,7 @@ var player_x = 10;
 var player_y = 10;
 var loop_count = 0;
 var other_player_positions_array = [];
+var other_players_ammount = 0;
 
 document.addEventListener("keydown", (event) => {
     if(event.key === "w") {
