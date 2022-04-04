@@ -11,6 +11,7 @@ var other_player_positions_array = [];
 var other_players_ammount = 0;
 var current_player_positoon = ["0,0"];
 var other_player_vectors = ["0,0"];
+var current_
 
 document.addEventListener("keydown", (event) => {
     if(event.key === "w") {
@@ -44,7 +45,7 @@ function get_other_positions() {
         url: './get_positions.php',
         type: "GET",
         success: function(data) {
-            var old_other_player_positions_array = other_player_positions_array;
+            old_other_player_positions_array = other_player_positions_array;
             other_player_positions_array = data.split(".");
             other_players_ammount = other_player_positions_array.length;
             console.log("Other players are located at: " + other_player_positions_array);
@@ -84,7 +85,7 @@ function move_others() {
         current_player_vector = other_player_vectors[i].split(",");
         current_player_position = other_player_positions_array[i].split(",");
         current_player_position_new_x = current_player_position[0] + current_player_vector[0];
-        current_player_position_new_y = current_player_position[1] + current_player_bector[1];
+        current_player_position_new_y = current_player_position[1] + current_player_vector[1];
         new_player_position = current_player_position_new_x + "," + current_player_position_new_y;
         other_player_positions_array[i] = new_player_position;
         console.log("Drawing other players at: " + new_player_position);
