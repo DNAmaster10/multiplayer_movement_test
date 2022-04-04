@@ -59,14 +59,14 @@ function calculate_vectors() {
     for (let i = 0; i < other_players_ammount; i++) {
         console.log("calculating vectors");
         current_player_position = other_player_positions_array[i].split(",");
-        old_current_player_position = old_other_player_positions_array[i].split(",");
-        old_current_player_x = old_current_player_position[0];
-        old_current_player_y = old_current_player_position[1];
-        current_player_x = current_player_position[0];
-        current_player_y = current_player_position[1];
-        current_player_x_change = current_player_x - old_current_player_x;
-        current_player_y_change = current_player_y - old_current_player_y;
-        vector_string = "";
+        var old_current_player_position = old_other_player_positions_array[i].split(",");
+        var old_current_player_x = old_current_player_position[0];
+        var old_current_player_y = old_current_player_position[1];
+        var current_player_x = current_player_position[0];
+        var current_player_y = current_player_position[1];
+        var current_player_x_change = current_player_x - old_current_player_x;
+        var current_player_y_change = current_player_y - old_current_player_y;
+        var vector_string = "";
         if (current_player_x_change > 0) {
             vector_x = current_player_x_change / get_request_delay;
             vector_string = vector_x + ",";
