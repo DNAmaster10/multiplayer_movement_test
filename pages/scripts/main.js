@@ -98,9 +98,6 @@ function update_others() {
 }
 function interpolate_calculate() {
 }
-function move_others() {
-    for (let i = 0; i < total_positions - 1; i++) {
-}
 function main_game_loop() {
     ctx.clearRect(0,0,c.width,c.height);
     update_player();
