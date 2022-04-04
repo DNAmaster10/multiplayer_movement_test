@@ -102,6 +102,7 @@ function update_others() {
     if (get_request_delay == loop_count) {
         send_player_position();
         get_other_positions();
+        console.log("Calculating vectors pre");
         calculate_vectors();
     }
     var other_players_ammount = other_player_positions_array.length;
