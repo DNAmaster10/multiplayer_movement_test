@@ -101,8 +101,8 @@ function move_others() {
 }
 function update_others() {
     loop_count = loop_count + 1;
+    send_player_position();
     if (get_request_delay == loop_count - 1) {
-        send_player_position();
         get_other_positions();
     }
     if (get_request_delay == loop_count) {
