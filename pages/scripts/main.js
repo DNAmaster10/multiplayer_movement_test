@@ -84,7 +84,7 @@ function move_others() {
         var current_player_position_new_x = current_player_position[0] + current_player_vector[0];
         var current_player_position_new_y = current_player_position[1] + current_player_bector[1];
         var new_player_position = current_player_position_new_x + "," + current_player_position_new_y;
-        other_player_positions_array[i] = new_player_position;
+        var other_player_positions_array[i] = new_player_position;
         console.log("Drawing other players at: " + new_player_position);
         ctx.beginPath();
         ctx.lineWidth = "4";
