@@ -104,7 +104,7 @@ function update_others() {
     if (other_players_ammount > 0) {
         move_others();
     }
-    console.log("There are " + other_players_ammmount + " other players");
+    console.log(loop_count);
 }
 function interpolate_calculate() {
 }
