@@ -70,7 +70,7 @@ function calculate_vectors() {
         other_player_vectors[i] = vector_string;
     }
 }
-function move_others();
+function move_others() {
     for (let i = 0; i < other_players_ammount; i++) {
         var current_player_vector = other_player_vectors[i].split(",");
         var current_player_position = other_player_positions_array[i].split(",");
@@ -83,6 +83,7 @@ function move_others();
         ctx.rect(current_player_position_new_x, current_player_position_new_y, 10, 10);
         ctx.stroke();
     }
+}
 function update_others() {
     loop_count = loop_count + 1;
     if (get_request_delay == loop_count) {
