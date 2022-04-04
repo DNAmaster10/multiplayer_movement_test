@@ -103,7 +103,7 @@ function update_others() {
     if (other_players_ammount > 0) {
         move_others();
     }
-    if (loop_count == get_request_delay) {
+    if (loop_count > get_request_delay) {
         loop_count = 0;
     }
     console.log(loop_count);
