@@ -55,6 +55,7 @@ function get_other_positions() {
 function calculate_vectors() {
     other_player_vectors = [];
     for (let i = 0; i < other_players_ammount; i++) {
+        console.log("calculating vectors");
         current_player_position = other_player_positions_array[i].split(",");
         old_current_player_position = old_other_player_positions_array.split(",");
         old_current_player_x = old_current_player_position[0];
@@ -78,7 +79,6 @@ function calculate_vectors() {
         else {
             vector_string = vector_string + "0";
         }
-        console.log(vector_string);
         other_player_vectors[i] = vector_string;
     }
 }
