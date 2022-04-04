@@ -78,7 +78,7 @@ function calculate_vectors() {
     }
 }
 function move_others() {
-    for (let i = 0; i < other_players_ammount; i++) {
+    for (let i = 0; i <= other_players_ammount; i++) {
         var current_player_vector = other_player_vectors[i].split(",");
         var current_player_position = other_player_positions_array[i].split(",");
         var current_player_position_new_x = current_player_position[0] + current_player_vector[0];
